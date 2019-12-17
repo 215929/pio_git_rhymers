@@ -5,10 +5,12 @@ import edu.kis.vh.nursery.factory.RhymersFactory;
 
 class RhymersDemo {
 
+    public static final int bound = 20;
+
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
 
-        defaultCountingOutRhymer[] rhymers = {factory.GetStandardRhymer(), factory.GetFalseRhymer(),
+        DefaultCountingOutRhymer[] rhymers = {factory.GetStandardRhymer(), factory.GetFalseRhymer(),
                 factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
 
         for (int i = 1; i < 15; i++)
@@ -17,7 +19,7 @@ class RhymersDemo {
 
         java.util.Random rn = new java.util.Random();
         for (int i = 1; i < 15; i++)
-            rhymers[3].countIn(rn.nextInt(20));
+            rhymers[3].countIn(rn.nextInt(bound));
 
         for (int i = 0; i < rhymers.length; i++) {
             while (!rhymers[i].callCheck())
