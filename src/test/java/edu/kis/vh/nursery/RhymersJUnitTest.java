@@ -75,7 +75,6 @@ public class RhymersJUnitTest {
         result = rhymer.countOut();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
-
 }
 
 // kombinacje alt + strzałki działają
